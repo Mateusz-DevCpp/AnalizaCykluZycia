@@ -9,36 +9,33 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.*;
 
-public class Window extends Application implements EventHandler<ActionEvent> {
-
-    private Button button;
+public class Window extends Application 
+{
+    private static Scene scene;
     
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         launch(args);
     }
-    
+
     @Override
-    public void start(Stage stage) throws Exception {
-        stage.setTitle("Test");
-        
-        button = new Button();
-        button.setText("click");
-        button.setOnAction(this);
-        
-        StackPane layout = new StackPane();
-        layout.getChildren().add(button);
-        
-        Scene scene = new Scene(layout, 800, 600);
-        
+    public void start(Stage stage) throws IOException 
+    {
+        scene = new Scene(loadFXML("main"), 640, 480);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.setTitle("Wypozyczalnia pojazdow");
         stage.show();
     }
 
-    @Override
-    public void handle(ActionEvent event) {
-        if(event.getSource() == button) {
-            System.err.println("press button");
-        }
-        
+    static void setRoot(String fxml) throws IOException 
+    {
+        scene.setRoot(loadFXML(fxml));
+    }
+
+    private static Parent loadFXML(String fxml) throws IOException 
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
     }
 }

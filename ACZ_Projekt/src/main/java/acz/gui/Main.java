@@ -1,11 +1,19 @@
 package acz.gui;
 
+import java.io.IOException;
+import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 import acz.model.Klienci.Klient;
 import acz.model.Pojazdy.Pojazd;
 import acz.model.Manager.ManagerKlientow;
 import acz.model.Manager.ManagerPojazdow;
 
-public class Main 
+public class Main
 {
     public static ManagerKlientow manager_klientow;
     public static ManagerPojazdow manager_pojazdow;
@@ -17,7 +25,6 @@ public class Main
     {
         manager_klientow = new ManagerKlientow();
         manager_pojazdow = new ManagerPojazdow();
-        
         
         Window.main(args);
     }
