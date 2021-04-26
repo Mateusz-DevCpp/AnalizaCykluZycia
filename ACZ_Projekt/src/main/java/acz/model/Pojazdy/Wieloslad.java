@@ -2,7 +2,7 @@ package acz.model.Pojazdy;
 
 import acz.model.Napedy.Naped;
 
-public class Wieloslad extends Pojazd
+public abstract class Wieloslad extends Pojazd
 {
     private int ilosc_miejsc;
     

@@ -14,6 +14,8 @@ public abstract class Klient
     {
         this.adres = adres;
         this.kontakt = kontakt;
+        
+        wypozyczenia = new Wypozyczenia();
     }
 
     public Wypozyczenia getWypozyczenia()

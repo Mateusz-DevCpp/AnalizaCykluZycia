@@ -13,7 +13,12 @@ public class Wypozyczenia
         wypozyczenia = new ArrayList<Pojazd>();
     }
     
-    boolean pozycz(Pojazd pojazd)
+    public int ilosc()
+    {
+        return wypozyczenia.size();
+    }
+    
+    public boolean pozycz(Pojazd pojazd)
     {
         if(pojazd.isWypozyczony())
         {
@@ -21,16 +26,17 @@ public class Wypozyczenia
         }
         else
         {
+            wypozyczenia.add(pojazd);
             pojazd.setWypozyczony(true);
             return true;
         }
     }
     
-    float oddaj(Pojazd pojazd)
+    public float oddaj(Pojazd pojazd)
     {
         for(int i=0; i<wypozyczenia.size(); i++)
         {
-            if(wypozyczenia.get(i).getId() == pojazd.getId())
+            if(wypozyczenia.get(i).getId().equals(pojazd.getId()))
             {
                 Random random = new Random();
                 int rand_int = random.nextInt(6) + 1;
@@ -38,6 +44,8 @@ public class Wypozyczenia
                 float cena = wypozyczenia.get(i).getCena() * rand_int;
                 wypozyczenia.get(i).getNaped().addPrzebieg(rand_int*225);
                 wypozyczenia.get(i).setWypozyczony(false);
+                
+                wypozyczenia.remove(pojazd);
                 return cena;
             }
         }
