@@ -8,6 +8,7 @@ public abstract class Pojazd
     private String id;
     private float cena;
     private float waga;
+    private boolean wypozyczony;
     
     public Pojazd(Naped naped, String id, float cena, float waga)
     {
@@ -15,6 +16,8 @@ public abstract class Pojazd
         this.id = id;
         this.cena = cena;
         this.waga = waga;
+        
+        this.wypozyczony = false;
     }
 
     @Override
@@ -71,4 +74,13 @@ public abstract class Pojazd
         this.waga = waga;
     }
     
+    public boolean isWypozyczony() 
+    {
+        return wypozyczony;
+    }
+
+    public void setWypozyczony(boolean wypozyczony) 
+    {
+        this.wypozyczony = wypozyczony;
+    }
 }

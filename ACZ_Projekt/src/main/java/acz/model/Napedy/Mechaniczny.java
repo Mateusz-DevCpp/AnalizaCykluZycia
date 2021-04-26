@@ -14,6 +14,26 @@ public class Mechaniczny extends Naped
         this.przebieg = przebieg;
     }
 
+    public int getPrzebieg() 
+    {
+        return przebieg;
+    }
+
+    public void addPrzebieg(int przebieg) 
+    {
+        this.przebieg += przebieg;
+    }
+
+    public float getMoc() 
+    {
+        return moc;
+    }
+
+    public float getZuzycie_paliwa() 
+    {
+        return zuzycie_paliwa;
+    }
+
     @Override
     public String toString() 
     {
