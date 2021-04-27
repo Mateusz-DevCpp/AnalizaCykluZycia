@@ -30,7 +30,7 @@ public class Fizyczny extends Naped
     
     @Override
     public String toString() {
-        return "Fizyczny";
+        return "Naped fizyczny";
     }
     
 }

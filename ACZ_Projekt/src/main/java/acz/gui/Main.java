@@ -10,8 +10,8 @@ public class Main
     public static ManagerKlientow manager_klientow;
     public static ManagerPojazdow manager_pojazdow;
     
-    public static Klient wybranu_klient;
-    public static Pojazd wybranu_pojazd;
+    public static Klient wybrany_klient;
+    public static Pojazd wybrany_pojazd;
     
     public static void main(String[] args) 
     {

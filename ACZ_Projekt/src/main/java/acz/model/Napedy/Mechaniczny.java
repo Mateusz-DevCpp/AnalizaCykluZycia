@@ -39,7 +39,7 @@ public class Mechaniczny extends Naped
     {
         String result = "";
         
-        result += "Mechaniczny:\n";
+        result += "Naped mechaniczny:\n";
         result += "\tmoc: " + moc + "\n";
         result += "\tzuzycie paliwa: " + zuzycie_paliwa + "\n";
         result += "\tprzebieg: " + przebieg;

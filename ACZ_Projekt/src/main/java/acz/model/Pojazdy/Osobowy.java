@@ -16,8 +16,6 @@ public class Osobowy extends Wieloslad
     {
         String result = super.toString();
         
-        result += "}";
-        
         return result;
     }
     

@@ -124,6 +124,12 @@ public class DodajKlientaController
         Window.setRoot("dodaj_pojazd");
     }
     
+    @FXML
+    private void switchToWyswietlPojazdyWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_pojazdy");
+    }
+    
     ///-------------------------------------------------------------------------
     
     @FXML Label lb_message;

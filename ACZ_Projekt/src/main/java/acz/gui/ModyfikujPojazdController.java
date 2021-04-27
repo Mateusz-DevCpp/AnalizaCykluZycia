@@ -1,33 +1,24 @@
 package acz.gui;
 
-import acz.model.Pojazdy.Pojazd;
 import java.io.IOException;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
-public class WyswietlPojazdyController 
+public class ModyfikujPojazdController 
 {
     @FXML
     public void initialize()
     {
-        for(int i=0; i<Main.manager_pojazdow.count(); i++)
-        {
-            lista.getItems().add(Main.manager_pojazdow.get(i));
-        }
-        
-        if(Main.manager_pojazdow.count() > 0)
-            lista.getSelectionModel().select(0);
-        else
-            bt_modyfikuj.setDisable(true);
-        
+        cena.setText(Float.toString(Main.wybrany_pojazd.getCena()));
+        nr_rejestracyjny.setText(Main.wybrany_pojazd.getId());
     }
     
     @FXML
-    private void modyfikuj() throws IOException
+    public void modyfikuj() throws IOException
     {
-        Main.wybrany_pojazd = lista.getSelectionModel().getSelectedItem();
-        Window.setRoot("modyfikuj_pojazd");
+        Main.wybrany_pojazd.setCena(Float.parseFloat(cena.getText()));
+        Main.wybrany_pojazd.setId(nr_rejestracyjny.getText());
+        goToMainWindow();
     }
     
     @FXML
@@ -40,6 +31,12 @@ public class WyswietlPojazdyController
     private void switchToDodajPojazdWindow() throws IOException 
     {
         Window.setRoot("dodaj_pojazd");
+    }
+    
+    @FXML
+    private void switchToWyswietlPojazdyWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_pojazdy");
     }
     
     @FXML
@@ -56,7 +53,7 @@ public class WyswietlPojazdyController
     
     ///-------------------------------------------------------------------------
     
-    @FXML private ListView<Pojazd> lista;
-    @FXML private Button bt_modyfikuj;
+    @FXML TextField cena;
+    @FXML TextField nr_rejestracyjny;
     
 }

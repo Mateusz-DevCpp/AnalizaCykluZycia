@@ -25,8 +25,16 @@ public abstract class Pojazd
     {
         String result = "";
         
-        result += "Pojazd:\n";
-        result += "{\n";
+        result += "Pojazd:";
+        if(isWypozyczony())
+        {
+            result += "Niedostepny";
+        }
+        else
+        {
+            result += "Dostepny";
+        }
+        result += "\n";
         result += "id: " + id + "\n";
         result += naped.toString() + "\n";
         result += "cena: " + cena + "\n";

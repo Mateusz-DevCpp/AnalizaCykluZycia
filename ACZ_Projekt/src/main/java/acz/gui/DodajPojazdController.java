@@ -22,6 +22,8 @@ public class DodajPojazdController
     {
         rb_osobowka.setSelected(true);
         rb_n_mechaniczny.setSelected(true);
+        lb_max_udzwig.setDisable(true);
+        max_udzwig.setDisable(true);
     }
     
     @FXML
@@ -192,14 +194,18 @@ public class DodajPojazdController
     }
     
     @FXML
+    private void switchToWyswietlPojazdyWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_pojazdy");
+    }
+    
+    @FXML
     private void switchToDodajKlientaWindow() throws IOException 
     {
         Window.setRoot("dodaj_klienta");
     }
     
     ///-------------------------------------------------------------------------
-    
-    @FXML Pane main_pane;
     
     @FXML Label lb_message;
     
