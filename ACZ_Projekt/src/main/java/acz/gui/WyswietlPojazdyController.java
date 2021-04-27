@@ -3,18 +3,20 @@ package acz.gui;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
-public class MainController {
+public class WyswietlPojazdyController 
+{
+    
+    
+    @FXML
+    private void goToMainWindow() throws IOException
+    {
+        Window.setRoot("main");
+    }
     
     @FXML
     private void switchToDodajPojazdWindow() throws IOException 
     {
         Window.setRoot("dodaj_pojazd");
-    }
-    
-    @FXML
-    private void switchToWyswietlPojazdyWindow() throws IOException 
-    {
-        Window.setRoot("wyswietl_pojazdy");
     }
     
     @FXML
@@ -28,5 +30,8 @@ public class MainController {
     {
         ;
     }
+    
+    ///-------------------------------------------------------------------------
+    
     
 }

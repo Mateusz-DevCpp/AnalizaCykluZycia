@@ -1,13 +1,5 @@
 package acz.gui;
 
-import java.io.IOException;
-import javafx.application.Application;
-import static javafx.application.Application.launch;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 import acz.model.Klienci.Klient;
 import acz.model.Pojazdy.Pojazd;
 import acz.model.Manager.ManagerKlientow;

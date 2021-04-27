@@ -2,11 +2,8 @@ package acz.gui;
 
 import java.io.IOException;
 import javafx.application.*;
-import javafx.event.*;
 import javafx.fxml.*;
 import javafx.scene.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
 import javafx.stage.*;
 
 public class Window extends Application 

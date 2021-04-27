@@ -22,12 +22,12 @@
             </Menu>
           <Menu mnemonicParsing="false" text="Pojazdy">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem disable="true" mnemonicParsing="false" text="Dodaj" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Klienci">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" onAction="#switchToDodajKlientaWindow" text="Dodaj" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Pomoc">
@@ -37,31 +37,36 @@
           </Menu>
         </menus>
       </MenuBar>
-      <TextField fx:id="nr_rejestracyjny" layoutX="225.0" layoutY="302.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="nr_rejestracyjny" layoutX="225.0" layoutY="296.0" prefHeight="25.0" prefWidth="150.0" />
       <RadioButton fx:id="rb_osobowka" layoutX="24.0" layoutY="66.0" mnemonicParsing="false" onAction="#typPojazduRB" prefHeight="30.0" prefWidth="200.0" text="Samochod osobowy" />
       <RadioButton fx:id="rb_transportowy" layoutX="24.0" layoutY="106.0" mnemonicParsing="false" onAction="#typPojazduRB" prefHeight="30.0" prefWidth="200.0" text="Samochod transportowy" />
       <RadioButton fx:id="rb_motor" layoutX="24.0" layoutY="146.0" mnemonicParsing="false" onAction="#typPojazduRB" prefHeight="30.0" prefWidth="200.0" text="Motor" />
       <RadioButton fx:id="rb_rower" layoutX="24.0" layoutY="186.0" mnemonicParsing="false" onAction="#typPojazduRB" prefHeight="30.0" prefWidth="200.0" text="Rower" />
-      <Label layoutX="250.0" layoutY="285.0" text="Numer rejstracyjny" />
+      <Label layoutX="250.0" layoutY="279.0" text="Numer rejstracyjny" />
       <Button layoutX="538.0" layoutY="361.0" mnemonicParsing="false" onAction="#dodaj" text="Dodaj" />
-      <Label layoutX="97.0" layoutY="285.0" text="Cena" />
-      <Label layoutX="475.0" layoutY="285.0" text="Waga" />
-      <TextField fx:id="waga" layoutX="415.0" layoutY="302.0" prefHeight="25.0" prefWidth="150.0" />
-      <TextField fx:id="cena" layoutX="35.0" layoutY="302.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="97.0" layoutY="279.0" text="Cena" />
+      <Label layoutX="95.0" layoutY="332.0" text="Waga" />
+      <TextField fx:id="waga" layoutX="35.0" layoutY="349.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="cena" layoutX="35.0" layoutY="296.0" prefHeight="25.0" prefWidth="150.0" />
       <RadioButton fx:id="rb_n_mechaniczny" layoutX="336.0" layoutY="66.0" mnemonicParsing="false" onAction="#typNapeduRB" text="Mechaniczny" />
       <RadioButton fx:id="rb_n_fizyczny" layoutX="436.0" layoutY="66.0" mnemonicParsing="false" onAction="#typNapeduRB" text="Fizyczny" />
       <Label layoutX="-44.0" layoutY="-6.0" text="Label" />
       <Label layoutX="91.0" layoutY="39.0" text="Typ pojazdu" />
       <Label layoutX="401.0" layoutY="39.0" text="Naped" />
-      <Label layoutX="308.0" layoutY="106.0" text="Moc" />
-      <Label layoutX="281.0" layoutY="138.0" text="Zuzycie paliwa" />
-      <Label layoutX="297.0" layoutY="168.0" text="Przebieg" />
-      <TextField fx:id="moc" layoutX="375.0" layoutY="102.0" />
-      <TextField fx:id="zuzycie_paliwa" layoutX="375.0" layoutY="134.0" />
-      <TextField fx:id="przebieg" layoutX="375.0" layoutY="164.0" />
+      <Label fx:id="lb_moc" layoutX="307.0" layoutY="122.0" text="Moc" />
+      <Label fx:id="lb_zuzycie_paliwa" layoutX="280.0" layoutY="154.0" text="Zuzycie paliwa" />
+      <Label fx:id="lb_przebieg" layoutX="296.0" layoutY="184.0" text="Przebieg" />
+      <TextField fx:id="moc" layoutX="374.0" layoutY="118.0" />
+      <TextField fx:id="zuzycie_paliwa" layoutX="374.0" layoutY="150.0" />
+      <TextField fx:id="przebieg" layoutX="374.0" layoutY="180.0" />
       <Line endX="9.0" endY="-34.0" layoutX="230.0" layoutY="66.0" startX="9.0" startY="173.0" />
       <Line endX="595.0" layoutX="110.0" layoutY="240.0" startX="-110.0" />
       <Label layoutX="285.0" layoutY="249.0" text="Inne" />
+      <TextField fx:id="ilosc_miejsc" layoutX="222.0" layoutY="349.0" />
+      <Label fx:id="lb_ilosc_miejsc" layoutX="266.0" layoutY="332.0" text="Ilosc miejsc" />
+      <TextField fx:id="max_udzwig" layoutX="419.0" layoutY="296.0" />
+      <Label fx:id="lb_max_udzwig" layoutX="450.0" layoutY="279.0" text="Maksymalny dzwig" />
+      <Label fx:id="lb_message" layoutX="387.0" layoutY="341.0" prefHeight="17.0" prefWidth="200.0" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
