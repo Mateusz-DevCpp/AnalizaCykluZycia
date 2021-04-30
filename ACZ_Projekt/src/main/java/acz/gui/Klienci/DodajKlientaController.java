@@ -1,11 +1,11 @@
-package acz.gui;
+package acz.gui.Klienci;
 
+import acz.gui.Main;
+import acz.gui.Window;
 import acz.model.Adres;
 import acz.model.Klienci.Firma;
-import acz.model.Klienci.Klient;
 import acz.model.Klienci.OsobaPrywatna;
 import acz.model.Kontakt;
-import java.awt.Color;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,12 +20,6 @@ public class DodajKlientaController
     public void initialize()
     {
         rb_os_prywatna.setSelected(true);
-    }
-
-    @FXML
-    private void goToMainWindow() throws IOException
-    {
-        Window.setRoot("main");
     }
 
     @FXML
@@ -119,6 +113,12 @@ public class DodajKlientaController
     }
     
     @FXML
+    private void goToMainWindow() throws IOException
+    {
+        Window.setRoot("main");
+    }
+    
+    @FXML
     private void switchToDodajPojazdWindow() throws IOException 
     {
         Window.setRoot("dodaj_pojazd");
@@ -128,6 +128,12 @@ public class DodajKlientaController
     private void switchToWyswietlPojazdyWindow() throws IOException 
     {
         Window.setRoot("wyswietl_pojazdy");
+    }
+    
+    @FXML
+    private void switchToWyswietlKlientowWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_klientow");
     }
     
     ///-------------------------------------------------------------------------

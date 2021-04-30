@@ -25,7 +25,7 @@ public abstract class Pojazd
     {
         String result = "";
         
-        result += "Pojazd:";
+        result += "Pojazd: ";
         if(isWypozyczony())
         {
             result += "Niedostepny";
@@ -36,9 +36,9 @@ public abstract class Pojazd
         }
         result += "\n";
         result += "id: " + id + "\n";
-        result += naped.toString() + "\n";
+        //result += naped.toString() + "\n";
         result += "cena: " + cena + "\n";
-        result += "waga: " + waga + "\n";
+        //result += "waga: " + waga + "\n";
         
         return result;
     }
@@ -53,7 +53,7 @@ public abstract class Pojazd
         this.naped = naped;
     }
 
-    public String getId() 
+    public String getID() 
     {
         return id;
     }

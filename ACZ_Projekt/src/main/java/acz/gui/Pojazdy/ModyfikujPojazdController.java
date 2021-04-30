@@ -1,4 +1,7 @@
-package acz.gui;
+package acz.gui.Pojazdy;
+
+import acz.gui.Main;
+import acz.gui.Window;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
@@ -10,7 +13,7 @@ public class ModyfikujPojazdController
     public void initialize()
     {
         cena.setText(Float.toString(Main.wybrany_pojazd.getCena()));
-        nr_rejestracyjny.setText(Main.wybrany_pojazd.getId());
+        nr_rejestracyjny.setText(Main.wybrany_pojazd.getID());
     }
     
     @FXML
@@ -43,6 +46,12 @@ public class ModyfikujPojazdController
     private void switchToDodajKlientaWindow() throws IOException 
     {
         Window.setRoot("dodaj_klienta");
+    }
+    
+    @FXML
+    private void switchToWyswietlKlientowWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_klientow");
     }
     
     @FXML

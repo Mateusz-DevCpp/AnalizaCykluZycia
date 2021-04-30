@@ -36,7 +36,7 @@ public class Wypozyczenia
     {
         for(int i=0; i<wypozyczenia.size(); i++)
         {
-            if(wypozyczenia.get(i).getId().equals(pojazd.getId()))
+            if(wypozyczenia.get(i).getID().equals(pojazd.getID()))
             {
                 Random random = new Random();
                 int rand_int = random.nextInt(6) + 1;

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 
-<Pane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acz.gui.DodajPojazdController">
+<Pane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acz.gui.Pojazdy.DodajPojazdController">
    <children>
       <MenuBar layoutY="2.0" maxHeight="30.0" maxWidth="700.0" minHeight="30.0" minWidth="640.0" prefHeight="30.0" prefWidth="640.0">
         <menus>
@@ -29,6 +29,7 @@
           <Menu mnemonicParsing="false" text="Klienci">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#switchToDodajKlientaWindow" text="Dodaj" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToWyswietlKlientowWindow" text="Przegladaj" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Pomoc">

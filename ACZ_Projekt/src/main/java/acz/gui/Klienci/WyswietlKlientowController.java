@@ -1,33 +1,45 @@
-package acz.gui;
+package acz.gui.Klienci;
 
-import acz.model.Pojazdy.Pojazd;
+import acz.gui.Main;
+import acz.gui.Window;
+import acz.model.Klienci.Klient;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 
-public class WyswietlPojazdyController 
+public class WyswietlKlientowController 
 {
-    @FXML
+   @FXML
     public void initialize()
     {
-        for(int i=0; i<Main.manager_pojazdow.count(); i++)
+        for(int i=0; i<Main.manager_klientow.count(); i++)
         {
-            lista.getItems().add(Main.manager_pojazdow.get(i));
+            lista.getItems().add(Main.manager_klientow.get(i));
         }
         
-        if(Main.manager_pojazdow.count() > 0)
+        if(Main.manager_klientow.count() > 0)
             lista.getSelectionModel().select(0);
         else
+        {
             bt_modyfikuj.setDisable(true);
+            bt_szczegoly.setDisable(true);
+        }
         
     }
     
     @FXML
     private void modyfikuj() throws IOException
     {
-        Main.wybrany_pojazd = lista.getSelectionModel().getSelectedItem();
-        Window.setRoot("modyfikuj_pojazd");
+        Main.wybrany_klient = lista.getSelectionModel().getSelectedItem();
+        Window.setRoot("modyfikuj_klienta");
+    }
+    
+    @FXML
+    private void szczegoly() throws IOException
+    {
+        Main.wybrany_klient = lista.getSelectionModel().getSelectedItem();
+        Window.setRoot("szczegoly_klienta");
     }
     
     @FXML
@@ -40,6 +52,12 @@ public class WyswietlPojazdyController
     private void switchToDodajPojazdWindow() throws IOException 
     {
         Window.setRoot("dodaj_pojazd");
+    }
+    
+    @FXML
+    private void switchToWyswietlPojazdyWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_pojazdy");
     }
     
     @FXML
@@ -56,7 +74,8 @@ public class WyswietlPojazdyController
     
     ///-------------------------------------------------------------------------
     
-    @FXML private ListView<Pojazd> lista;
+    @FXML private ListView<Klient> lista;
     @FXML private Button bt_modyfikuj;
     
+    @FXML private Button bt_szczegoly;
 }

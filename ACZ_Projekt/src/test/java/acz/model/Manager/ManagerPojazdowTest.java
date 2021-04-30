@@ -60,7 +60,7 @@ public class ManagerPojazdowTest {
         assertEquals(mp.count(), 2);
         assertTrue(mp.unregister(mp.get(0)));
         assertEquals(mp.count(), 1);
-        assertEquals(mp.get(0).getId(), "OBE WUS");
+        assertEquals(mp.get(0).getID(), "OBE WUS");
         assertTrue(mp.unregister(mp.get(0)));
         assertEquals(mp.count(), 0);
         

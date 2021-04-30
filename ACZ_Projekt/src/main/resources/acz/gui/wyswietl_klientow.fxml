@@ -8,7 +8,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acz.gui.Pojazdy.WyswietlPojazdyController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acz.gui.Klienci.WyswietlKlientowController">
    <children>
       <MenuBar layoutY="2.0" maxHeight="30.0" maxWidth="700.0" minHeight="30.0" minWidth="640.0" prefHeight="30.0" prefWidth="640.0">
         <menus>
@@ -20,13 +20,13 @@
           <Menu mnemonicParsing="false" text="Pojazdy">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#switchToDodajPojazdWindow" text="Dodaj" />
-                  <MenuItem disable="true" mnemonicParsing="false" text="Przegladaj" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToWyswietlPojazdyWindow" text="Przegladaj" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Klienci">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#switchToDodajKlientaWindow" text="Dodaj" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToWyswietlKlientowWindow" text="Przegladaj" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Przegladaj" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Pomoc">
@@ -39,5 +39,6 @@
       <Separator layoutX="190.0" layoutY="32.0" orientation="VERTICAL" prefHeight="447.0" prefWidth="0.0" />
       <ListView fx:id="lista" layoutX="193.0" layoutY="32.0" prefHeight="447.0" prefWidth="446.0" stylesheets="@stylesheet/bg_list_color.css" />
       <Button fx:id="bt_modyfikuj" layoutX="20.0" layoutY="50.0" mnemonicParsing="false" onAction="#modyfikuj" prefHeight="30.0" prefWidth="150.0" text="Modyfikuj" />
+      <Button fx:id="bt_szczegoly" layoutX="20.0" layoutY="100.0" mnemonicParsing="false" onAction="#szczegoly" prefHeight="30.0" prefWidth="150.0" text="Szczegoly" />
    </children>
 </Pane>

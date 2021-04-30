@@ -1,4 +1,7 @@
-package acz.gui;
+package acz.gui.Pojazdy;
+
+import acz.gui.Main;
+import acz.gui.Window;
 
 import acz.model.Napedy.Fizyczny;
 import acz.model.Napedy.Mechaniczny;
@@ -12,7 +15,6 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 
 public class DodajPojazdController 
@@ -203,6 +205,12 @@ public class DodajPojazdController
     private void switchToDodajKlientaWindow() throws IOException 
     {
         Window.setRoot("dodaj_klienta");
+    }
+    
+    @FXML
+    private void switchToWyswietlKlientowWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_klientow");
     }
     
     ///-------------------------------------------------------------------------

@@ -43,9 +43,14 @@ public abstract class Klient
         this.adres = adres;
     }
     
-    public String getId()
+    public String getID()
     {
         return "";
+    }
+    
+    public void setID(String id)
+    {
+        ;
     }
 
     @Override
@@ -53,11 +58,35 @@ public abstract class Klient
     {
         String result = "";
         
-        result += "Klient\n";
-        result += "{\n";
-        result += adres.toString() + "\n";
+        result += "Klient: ";
+        //result += adres.toString() + "\n";
+        //result += kontakt.toString() + "\n";
         
         return result;
     }
+
+    public String getNazwa() 
+    {
+        return "";
+    }
     
+    public String getNazwa2() 
+    {
+        return "";
+    }
+
+    public void setNazwa(String nazwa) 
+    {
+        ;
+    }
+    
+    public void setNazwa2(String nazwa) 
+    {
+        ;
+    }
+    
+    public String getType()
+    {
+        return "";
+    }
 }

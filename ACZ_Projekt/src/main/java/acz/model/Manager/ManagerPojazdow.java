@@ -17,7 +17,7 @@ public class ManagerPojazdow implements Manager<Pojazd>
     {
         for(int i=0; i<pojazdy_rep.size(); i++)
         {
-            if(pojazdy_rep.get(i).getId().equals(newObj.getId()))
+            if(pojazdy_rep.get(i).getID().equals(newObj.getID()))
             {
                 return false;
             }
@@ -33,7 +33,7 @@ public class ManagerPojazdow implements Manager<Pojazd>
     {
         for(int i=0; i<pojazdy_rep.size(); i++)
         {
-            if(pojazdy_rep.get(i).getId().equals(obj.getId()))
+            if(pojazdy_rep.get(i).getID().equals(obj.getID()))
             {
                 pojazdy_rep.remove(obj);
                 return true;
@@ -47,7 +47,7 @@ public class ManagerPojazdow implements Manager<Pojazd>
     {
         for(int i=0; i<pojazdy_rep.size(); i++)
         {
-            if(id.equals(pojazdy_rep.get(i).getId()))
+            if(id.equals(pojazdy_rep.get(i).getID()))
             {
                 return i;
             }

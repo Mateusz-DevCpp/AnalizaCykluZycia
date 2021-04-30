@@ -8,11 +8,13 @@ public class Firma extends Klient
     private String nip;
     private String nazwa;
 
-    public String getNazwa() {
+    public String getNazwa() 
+    {
         return nazwa;
     }
 
-    public void setNazwa(String nazwa) {
+    public void setNazwa(String nazwa) 
+    {
         this.nazwa = nazwa;
     }
     
@@ -23,7 +25,7 @@ public class Firma extends Klient
         this.nip = nip;
     }
     
-    public String getId()
+    public String getID()
     {
         return nip;
     }
@@ -32,9 +34,14 @@ public class Firma extends Klient
     public String toString() {
         String result = super.toString();
         
+        result +=  nazwa + "\n";
         result += "nip: " + nip + "\n";
-        result += "}";
         
         return result;
+    }
+    
+    public String getType()
+    {
+        return "Firma";
     }
 }

@@ -3,8 +3,8 @@ package acz.gui;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
-public class MainController {
-    
+public class MainController 
+{
     @FXML
     private void switchToDodajPojazdWindow() throws IOException 
     {
@@ -21,6 +21,18 @@ public class MainController {
     private void switchToDodajKlientaWindow() throws IOException 
     {
         Window.setRoot("dodaj_klienta");
+    }
+    
+    @FXML
+    private void switchToWyswietlKlientowWindow() throws IOException 
+    {
+        Window.setRoot("wyswietl_klientow");
+    }
+    
+    @FXML
+    private void switchToWypozyczWindow() throws IOException 
+    {
+        Window.setRoot("wypozycz");
     }
     
     @FXML

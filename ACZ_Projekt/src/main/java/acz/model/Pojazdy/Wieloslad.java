@@ -17,7 +17,7 @@ public abstract class Wieloslad extends Pojazd
     {
         String result = super.toString();
         
-        result += "ilosc miejsc: " + Integer.toString(ilosc_miejsc) + "\n";
+        //result += "ilosc miejsc: " + Integer.toString(ilosc_miejsc) + "\n";
         
         return result;
     }

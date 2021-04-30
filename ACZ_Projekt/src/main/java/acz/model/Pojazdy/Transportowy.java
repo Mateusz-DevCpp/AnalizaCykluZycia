@@ -17,7 +17,7 @@ public class Transportowy extends Wieloslad
     {
         String result = super.toString();
         
-        result += "udzwig: " + Integer.toString(max_udzwig) + "\n";
+        //result += "udzwig: " + Integer.toString(max_udzwig) + "\n";
         
         return result;
     }

@@ -16,10 +16,35 @@ public class OsobaPrywatna extends Klient
         this.nazwisko = nazwisko;
         this.pesel = pesel;
     }
-    
-    public String getId()
+
+    public String getImie() 
+    {
+        return imie;
+    }
+
+    public void setImie(String imie) 
+    {
+        this.imie = imie;
+    }
+
+    public String getNazwisko() 
+    {
+        return nazwisko;
+    }
+
+    public void setNazwisko(String nazwisko) 
+    {
+        this.nazwisko = nazwisko;
+    }
+
+    public String getID() 
     {
         return pesel;
+    }
+
+    public void setID(String pesel) 
+    {
+        this.pesel = pesel;
     }
     
     @Override
@@ -29,8 +54,32 @@ public class OsobaPrywatna extends Klient
         result += "imie: " + imie + "\n";
         result += "nazwisko: " + nazwisko + "\n";
         result += "pesel: " + pesel + "\n";
-        result += "}";
         
         return result;
+    }
+    
+    public String getNazwa() 
+    {
+        return getImie();
+    }
+    
+    public String getNazwa2() 
+    {
+        return getNazwisko();
+    }
+    
+    public void setNazwa(String nazwa) 
+    {
+        setImie(nazwa);
+    }
+    
+    public void setNazwa2(String nazwa) 
+    {
+        setNazwisko(nazwa);
+    }
+    
+     public String getType()
+    {
+        return "OsobaPrywatna";
     }
 }

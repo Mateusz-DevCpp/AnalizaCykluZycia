@@ -17,7 +17,7 @@ public class ManagerKlientow implements Manager<Klient>
     {
         for(int i=0; i<klient_rep.size(); i++)
         {
-            if(klient_rep.get(i).getId().equals(newObj.getId()))
+            if(klient_rep.get(i).getID().equals(newObj.getID()))
             {
                 return false;
             }
@@ -33,7 +33,7 @@ public class ManagerKlientow implements Manager<Klient>
     {
         for(int i=0; i<klient_rep.size(); i++)
         {
-            if(klient_rep.get(i).getId().equals(obj.getId()))
+            if(klient_rep.get(i).getID().equals(obj.getID()))
             {
                 klient_rep.remove(obj);
                 return true;
@@ -47,7 +47,7 @@ public class ManagerKlientow implements Manager<Klient>
     {
         for(int i=0; i<klient_rep.size(); i++)
         {
-            if(id.equals(klient_rep.get(i).getId()))
+            if(id.equals(klient_rep.get(i).getID()))
             {
                 return i;
             }
