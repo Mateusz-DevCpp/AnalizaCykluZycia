@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -15,6 +16,10 @@
             <Menu mnemonicParsing="false" text="Nawigacja">
               <items>
                 <MenuItem disable="true" mnemonicParsing="false" text="strona startowa" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToWypozyczWindow" text="Wypozycz" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToOddajWindow" text="Oddaj" />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Pojazdy">
@@ -46,5 +51,6 @@
          </font>
       </Label>
       <Button layoutX="245.0" layoutY="320.0" mnemonicParsing="false" onAction="#switchToWypozyczWindow" prefHeight="30.0" prefWidth="150.0" text="Wypozycz" />
+      <Button layoutX="245.0" layoutY="370.0" mnemonicParsing="false" onAction="#switchToOddajWindow" prefHeight="30.0" prefWidth="150.0" text="Oddaj" />
    </children>
 </Pane>

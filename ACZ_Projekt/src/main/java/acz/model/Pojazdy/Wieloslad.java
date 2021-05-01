@@ -22,5 +22,8 @@ public abstract class Wieloslad extends Pojazd
         return result;
     }
     
-    
+    public int getIloscMiejsc()
+    {
+        return ilosc_miejsc;
+    }
 }

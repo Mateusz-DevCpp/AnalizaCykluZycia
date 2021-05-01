@@ -49,6 +49,18 @@ public class WyswietlKlientowController
     }
     
     @FXML
+    private void switchToWypozyczWindow() throws IOException 
+    {
+        Window.setRoot("wypozycz");
+    }
+    
+    @FXML
+    private void switchToOddajWindow() throws IOException 
+    {
+        Window.setRoot("oddaj");
+    }
+    
+    @FXML
     private void switchToDodajPojazdWindow() throws IOException 
     {
         Window.setRoot("dodaj_pojazd");

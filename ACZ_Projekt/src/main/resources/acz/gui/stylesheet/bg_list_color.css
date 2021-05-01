@@ -1,9 +1,9 @@
-.list-view .list-cell:odd 
+.list-view .list-cell:odd
 {
-    -fx-background-color: #c2c2c2;
+    -fx-background-color: #8C8C8C;
 }
 
-.list-view .list-cell:even 
+.list-view .list-cell:even
 {
     -fx-background-color: #a1a1a1;
 }

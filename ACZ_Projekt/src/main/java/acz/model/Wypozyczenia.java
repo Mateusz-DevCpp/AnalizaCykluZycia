@@ -51,4 +51,9 @@ public class Wypozyczenia
         }
         return 0;
     }
+    
+    public Pojazd get(int id)
+    {
+        return wypozyczenia.get(id);
+    }
 }

@@ -22,7 +22,10 @@ public class WyswietlPojazdyController
         if(Main.manager_pojazdow.count() > 0)
             lista.getSelectionModel().select(0);
         else
+        {
             bt_modyfikuj.setDisable(true);
+            bt_szczegoly.setDisable(true);
+        }
         
     }
     
@@ -34,9 +37,28 @@ public class WyswietlPojazdyController
     }
     
     @FXML
+    private void szczegoly() throws IOException
+    {
+        Main.wybrany_pojazd = lista.getSelectionModel().getSelectedItem();
+        Window.setRoot("szczegoly_pojazdu");
+    }
+    
+    @FXML
     private void goToMainWindow() throws IOException
     {
         Window.setRoot("main");
+    }
+    
+    @FXML
+    private void switchToWypozyczWindow() throws IOException 
+    {
+        Window.setRoot("wypozycz");
+    }
+    
+    @FXML
+    private void switchToOddajWindow() throws IOException 
+    {
+        Window.setRoot("oddaj");
     }
     
     @FXML
@@ -67,5 +89,6 @@ public class WyswietlPojazdyController
     
     @FXML private ListView<Pojazd> lista;
     @FXML private Button bt_modyfikuj;
+    @FXML private Button bt_szczegoly;
     
 }

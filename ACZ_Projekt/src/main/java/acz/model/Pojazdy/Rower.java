@@ -9,4 +9,13 @@ public class Rower extends Jednoslad
         super(naped, id, cena, waga);
     }
     
+    public int getIloscMiejsc()
+    {
+        return 1;
+    }   
+    
+    public String getType()
+    {
+        return "Rower";
+    }
 }

@@ -6,6 +6,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.Pane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acz.gui.Pojazdy.WyswietlPojazdyController">
@@ -15,6 +16,10 @@
             <Menu mnemonicParsing="false" text="Nawigacja">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#goToMainWindow" text="strona startowa" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToWypozyczWindow" text="Wypozycz" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToOddajWindow" text="Oddaj" />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Pojazdy">
@@ -39,5 +44,6 @@
       <Separator layoutX="190.0" layoutY="32.0" orientation="VERTICAL" prefHeight="447.0" prefWidth="0.0" />
       <ListView fx:id="lista" layoutX="193.0" layoutY="32.0" prefHeight="447.0" prefWidth="446.0" stylesheets="@stylesheet/bg_list_color.css" />
       <Button fx:id="bt_modyfikuj" layoutX="20.0" layoutY="50.0" mnemonicParsing="false" onAction="#modyfikuj" prefHeight="30.0" prefWidth="150.0" text="Modyfikuj" />
+      <Button fx:id="bt_szczegoly" layoutX="20.0" layoutY="100.0" mnemonicParsing="false" onAction="#szczegoly" prefHeight="30.0" prefWidth="150.0" text="Szczegoly" />
    </children>
 </Pane>

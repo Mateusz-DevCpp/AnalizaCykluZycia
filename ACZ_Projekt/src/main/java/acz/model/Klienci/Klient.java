@@ -58,7 +58,7 @@ public abstract class Klient
     {
         String result = "";
         
-        result += "Klient: ";
+        //result += "Klient: ";
         //result += adres.toString() + "\n";
         //result += kontakt.toString() + "\n";
         

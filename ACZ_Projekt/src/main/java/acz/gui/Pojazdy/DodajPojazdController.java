@@ -196,6 +196,18 @@ public class DodajPojazdController
     }
     
     @FXML
+    private void switchToWypozyczWindow() throws IOException 
+    {
+        Window.setRoot("wypozycz");
+    }
+    
+    @FXML
+    private void switchToOddajWindow() throws IOException 
+    {
+        Window.setRoot("oddaj");
+    }
+    
+    @FXML
     private void switchToWyswietlPojazdyWindow() throws IOException 
     {
         Window.setRoot("wyswietl_pojazdy");

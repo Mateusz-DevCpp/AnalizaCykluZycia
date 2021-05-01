@@ -51,9 +51,9 @@ public class OsobaPrywatna extends Klient
     public String toString() {
         String result = super.toString();
         
-        result += "imie: " + imie + "\n";
-        result += "nazwisko: " + nazwisko + "\n";
-        result += "pesel: " + pesel + "\n";
+        result += "Imie: " + imie + "\n";
+        result += "Nazwisko: " + nazwisko + "\n";
+        result += "PESEL: " + pesel + "\n";
         
         return result;
     }

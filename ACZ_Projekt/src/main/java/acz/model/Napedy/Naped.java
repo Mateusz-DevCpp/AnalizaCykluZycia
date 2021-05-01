@@ -26,4 +26,9 @@ public abstract class Naped
     {
         return 0;
     }
+    
+    public String getType()
+    {
+        return "";
+    }
 }

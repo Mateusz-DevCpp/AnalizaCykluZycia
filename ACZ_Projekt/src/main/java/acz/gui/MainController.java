@@ -36,6 +36,12 @@ public class MainController
     }
     
     @FXML
+    private void switchToOddajWindow() throws IOException 
+    {
+        Window.setRoot("oddaj");
+    }
+    
+    @FXML
     private void displayAuthors() throws IOException
     {
         ;

@@ -17,6 +17,8 @@
             <Menu mnemonicParsing="false" text="Nawigacja">
               <items>
                   <MenuItem mnemonicParsing="false" onAction="#goToMainWindow" text="strona glowna" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToWypozyczWindow" text="Wypozycz" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToOddajWindow" text="Oddaj" />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Pojazdy">

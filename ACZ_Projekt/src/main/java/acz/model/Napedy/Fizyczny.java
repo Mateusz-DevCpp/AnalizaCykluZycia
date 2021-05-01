@@ -33,4 +33,8 @@ public class Fizyczny extends Naped
         return "Naped fizyczny";
     }
     
+    public String getType()
+    {
+        return "Fizyczny";
+    }
 }

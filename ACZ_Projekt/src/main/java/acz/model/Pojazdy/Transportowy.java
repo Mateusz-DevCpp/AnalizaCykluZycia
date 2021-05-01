@@ -22,9 +22,13 @@ public class Transportowy extends Wieloslad
         return result;
     }
     
-    public int getMax_udzwig() 
+    public int getMaxUdzwig() 
     {
         return max_udzwig;
     }
     
+    public String getType()
+    {
+        return "Transoprter";
+    }
 }

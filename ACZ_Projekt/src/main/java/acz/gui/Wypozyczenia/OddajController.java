@@ -14,18 +14,11 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Paint;
 
-public class WypozyczController 
+public class OddajController 
 {
     @FXML
     public void initialize()
     {
-        for(int i=0; i<Main.manager_pojazdow.count(); i++)
-        {
-            lista_pojazdow.getItems().add(Main.manager_pojazdow.get(i));
-        }
-        if(Main.manager_pojazdow.count() > 0)
-            lista_pojazdow.getSelectionModel().select(0);
-    
         for(int i=0; i<Main.manager_klientow.count(); i++)
         {
             lista_klientow.getItems().add(Main.manager_klientow.get(i));
@@ -35,23 +28,10 @@ public class WypozyczController
     }
     
     @FXML
-    private void wypozycz() throws IOException
+    private void oddaj() throws IOException
     {
-        Main.wybrany_klient = lista_klientow.getSelectionModel().getSelectedItem();
-        Main.wybrany_pojazd = lista_pojazdow.getSelectionModel().getSelectedItem();
-        
-        if(Main.wybrany_klient.getWypozyczenia().pozycz(Main.wybrany_pojazd))
-        {
-            Main.wybrany_klient = null;
-            Main.wybrany_pojazd = null;
-
-            goToMainWindow();
-        }
-        else
-        {
-            lb_message.setTextFill(Paint.valueOf("#FF0000"));
-            lb_message.setText("Pojazd nie jest dostepny");
-        }
+        Main.wybrany_klient.getWypozyczenia().oddaj(Main.wybrany_pojazd);
+        goToMainWindow();
     }
     
     @FXML
@@ -76,7 +56,7 @@ public class WypozyczController
                 }
         }
         
-        aktualizujSrodek();
+        wybranoPojazd();
     }
     
     @FXML
@@ -104,25 +84,18 @@ public class WypozyczController
             }
         }
         
-        aktualizujSrodek();
+        wybranoKlienta();
     }
     
     @FXML
-    private void aktualizujSrodek()
+    private void wybranoKlienta()
     {
-        if(lista_pojazdow.getSelectionModel().isEmpty())
-        {
-            bt_wypozycz.setDisable(true);
-            ta_wybrany_pojazd.setText("BRAK");
-        }
-        else
-        {
-            ta_wybrany_pojazd.setText(lista_pojazdow.getSelectionModel().getSelectedItem().toString());
-        }
-    
+        bt_oddaj.setDisable(true);
+        lista_pojazdow.getItems().clear();
+        Main.wybrany_klient = lista_klientow.getSelectionModel().getSelectedItem();
+        
         if(lista_klientow.getSelectionModel().isEmpty())
         {
-            bt_wypozycz.setDisable(true);
             ta_wybrany_klient.setText("BRAK");
         }
         else
@@ -130,9 +103,34 @@ public class WypozyczController
             ta_wybrany_klient.setText(lista_klientow.getSelectionModel().getSelectedItem().toString());
         }
         
-        if(!lista_pojazdow.getSelectionModel().isEmpty() && !lista_klientow.getSelectionModel().isEmpty())
+        for(int i=0; i<Main.wybrany_klient.getWypozyczenia().ilosc(); i++)
         {
-            bt_wypozycz.setDisable(false);
+            lista_pojazdow.getItems().add(Main.wybrany_klient.getWypozyczenia().get(i));
+        }
+        
+        if(lista_pojazdow.getSelectionModel().isEmpty())
+        {
+            ta_wybrany_pojazd.setText("BRAK");
+        }
+        else
+        {
+            ta_wybrany_pojazd.setText(lista_pojazdow.getSelectionModel().getSelectedItem().toString());
+        }
+    }
+    
+    @FXML
+    private void wybranoPojazd()
+    {
+        Main.wybrany_pojazd = lista_pojazdow.getSelectionModel().getSelectedItem();
+        
+        if(lista_pojazdow.getSelectionModel().isEmpty())
+        {
+            ta_wybrany_pojazd.setText("BRAK");
+        }
+        else
+        {
+            ta_wybrany_pojazd.setText(lista_pojazdow.getSelectionModel().getSelectedItem().toString());
+            bt_oddaj.setDisable(false);
         }
     }
     
@@ -187,7 +185,7 @@ public class WypozyczController
     ///-------------------------------------------------------------------------
     @FXML Label lb_message;
     
-    @FXML Button bt_wypozycz;
+    @FXML Button bt_oddaj;
     
     @FXML RadioButton rb_filtr_pojazd;
     @FXML RadioButton rb_filtr_klient;

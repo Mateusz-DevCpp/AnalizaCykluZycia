@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acz.gui.Wypozyczenia.WypozyczController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acz.gui.Wypozyczenia.OddajController">
    <children>
       <MenuBar layoutY="2.0" maxHeight="30.0" maxWidth="700.0" minHeight="30.0" minWidth="640.0" prefHeight="30.0" prefWidth="640.0">
         <menus>
@@ -21,9 +21,9 @@
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#goToMainWindow" text="strona startowa" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem disable="true" mnemonicParsing="false" onAction="#switchToWypozyczWindow" text="Wypozycz" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToWypozyczWindow" text="Wypozycz" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToOddajWindow" text="Oddaj" />
+                  <MenuItem disable="true" mnemonicParsing="false" onAction="#switchToOddajWindow" text="Oddaj" />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Pojazdy">
@@ -47,23 +47,23 @@
       </MenuBar>
       <Separator layoutX="200.0" layoutY="32.0" orientation="VERTICAL" prefHeight="448.0" prefWidth="0.0" />
       <Separator layoutX="437.0" layoutY="32.0" orientation="VERTICAL" prefHeight="448.0" />
-      <ListView fx:id="lista_pojazdow" layoutX="440.0" layoutY="100.0" onMousePressed="#aktualizujSrodek" prefHeight="380.0" prefWidth="200.0" stylesheets="@stylesheet/bg_list_color.css" />
-      <ListView fx:id="lista_klientow" layoutY="100.0" onMousePressed="#aktualizujSrodek" prefHeight="380.0" prefWidth="200.0" stylesheets="@stylesheet/bg_list_color.css" />
-      <Button fx:id="bt_wypozycz" disable="true" layoutX="245.0" layoutY="425.0" mnemonicParsing="false" onAction="#wypozycz" prefHeight="30.0" prefWidth="150.0" text="Wypozycz" />
-      <Label layoutX="510.0" layoutY="35.0" text="Pojazdy">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      <ListView fx:id="lista_klientow" layoutY="100.0" onMousePressed="#wybranoKlienta" prefHeight="380.0" prefWidth="200.0" stylesheets="@stylesheet/bg_list_color.css" />
+      <ListView fx:id="lista_pojazdow" layoutX="440.0" layoutY="100.0" onMousePressed="#wybranoPojazd" prefHeight="380.0" prefWidth="200.0" stylesheets="@stylesheet/bg_list_color.css" />
+      <Button fx:id="bt_oddaj" disable="true" layoutX="245.0" layoutY="425.0" mnemonicParsing="false" onAction="#oddaj" prefHeight="30.0" prefWidth="150.0" text="Oddaj" />
       <Label layoutX="75.0" layoutY="35.0" text="Klienci">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_filtr_pojazd" layoutX="445.0" layoutY="65.0" prefHeight="30.0" prefWidth="125.0" />
+      <Label layoutX="510.0" layoutY="35.0" text="Pojazdy">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       <TextField fx:id="tf_filtr_klient" layoutX="70.0" layoutY="65.0" prefHeight="30.0" prefWidth="125.0" />
-      <Button fx:id="bt_filtr_pojazd" layoutX="575.0" layoutY="65.0" mnemonicParsing="false" onAction="#filtrujPojazdy" prefHeight="30.0" text="Zastosuj" />
-      <Button fx:id="bt_filtr_klient" layoutX="5.0" layoutY="65.0" mnemonicParsing="false" onAction="#filtrujKlientow" prefHeight="30.0" text="Zastosuj" />
+      <TextField fx:id="tf_filtr_pojazd" layoutX="445.0" layoutY="65.0" prefHeight="30.0" prefWidth="125.0" />
+      <Button fx:id="bt_filtr_pojazd" layoutX="5.0" layoutY="65.0" mnemonicParsing="false" onAction="#filtrujPojazdy" prefHeight="30.0" text="Zastosuj" />
+      <Button fx:id="bt_filtr_klient" layoutX="575.0" layoutY="65.0" mnemonicParsing="false" onAction="#filtrujKlientow" prefHeight="30.0" text="Zastosuj" />
       <TextArea fx:id="ta_wybrany_pojazd" disable="true" layoutX="220.0" layoutY="250.0" prefHeight="100.0" prefWidth="200.0" />
       <Label layoutX="255.0" layoutY="230.0" text="Wybrany pojazd">
          <font>

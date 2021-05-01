@@ -34,8 +34,8 @@ public class Firma extends Klient
     public String toString() {
         String result = super.toString();
         
-        result +=  nazwa + "\n";
-        result += "nip: " + nip + "\n";
+        result +=  "Nazwa: " + nazwa + "\n";
+        result += "NIP: " + nip + "\n";
         
         return result;
     }

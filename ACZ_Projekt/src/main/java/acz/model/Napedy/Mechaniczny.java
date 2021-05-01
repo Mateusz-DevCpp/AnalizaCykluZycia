@@ -46,4 +46,9 @@ public class Mechaniczny extends Naped
         
         return result;
     }
+    
+    public String getType()
+    {
+        return "Mechaniczny";
+    }
 }

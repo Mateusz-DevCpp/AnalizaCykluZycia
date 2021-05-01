@@ -5,23 +5,9 @@ import acz.gui.Window;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 
 public class SzczegolyKlientaController 
 {
-    @FXML private Label lb_nazwa_tag;
-    @FXML private Label lb_nazwa2_tag;
-    @FXML private Label lb_identyfikator_tag;
-    @FXML private Label identyfikator;
-    @FXML private Label lb_nazwa;
-    @FXML private Label lb_nazwa2;
-    @FXML private Label miasto;
-    @FXML private Label ulica;
-    @FXML private Label mieszkanie;
-    @FXML private Label kod_pocztowy;
-    @FXML private Label email;
-    @FXML private Label nr_telefonu;
-    
     @FXML
     public void initialize() 
     {
@@ -57,6 +43,18 @@ public class SzczegolyKlientaController
     }
     
     @FXML
+    private void switchToWypozyczWindow() throws IOException 
+    {
+        Window.setRoot("wypozycz");
+    }
+    
+    @FXML
+    private void switchToOddajWindow() throws IOException 
+    {
+        Window.setRoot("oddaj");
+    }
+    
+    @FXML
     private void switchToDodajPojazdWindow() throws IOException 
     {
         Window.setRoot("dodaj_pojazd");
@@ -88,4 +86,16 @@ public class SzczegolyKlientaController
     
     ///-------------------------------------------------------------------------
     
+    @FXML private Label lb_nazwa_tag;
+    @FXML private Label lb_nazwa2_tag;
+    @FXML private Label lb_identyfikator_tag;
+    @FXML private Label identyfikator;
+    @FXML private Label lb_nazwa;
+    @FXML private Label lb_nazwa2;
+    @FXML private Label miasto;
+    @FXML private Label ulica;
+    @FXML private Label mieszkanie;
+    @FXML private Label kod_pocztowy;
+    @FXML private Label email;
+    @FXML private Label nr_telefonu;
 }

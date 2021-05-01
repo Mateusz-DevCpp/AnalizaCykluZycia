@@ -19,4 +19,8 @@ public class Osobowy extends Wieloslad
         return result;
     }
     
+    public String getType()
+    {
+        return "Osobowka";
+    }
 }

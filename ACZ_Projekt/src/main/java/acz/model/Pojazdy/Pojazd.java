@@ -25,7 +25,7 @@ public abstract class Pojazd
     {
         String result = "";
         
-        result += "Pojazd: ";
+        result += "Pojazd: " + getType() + "\n";
         if(isWypozyczony())
         {
             result += "Niedostepny";
@@ -90,5 +90,21 @@ public abstract class Pojazd
     public void setWypozyczony(boolean wypozyczony) 
     {
         this.wypozyczony = wypozyczony;
+    }
+    
+    
+    public int getIloscMiejsc()
+    {
+        return 0;
+    }
+    
+    public int getMaxUdzwig()
+    {
+        return 0;
+    }
+    
+    public String getType()
+    {
+        return "";
     }
 }
