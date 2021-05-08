@@ -72,32 +72,42 @@ public class DodajPojazdController
         
         boolean dodano = false;
         
-        Naped naped;
-        if(rb_n_mechaniczny.isSelected())
-        {
-            naped = new Mechaniczny(Float.parseFloat(str_moc), Float.parseFloat(str_zuzycie_plaiwa), Integer.parseInt(str_przebieg));
-        }
-        else
-        {
-            naped = new Fizyczny();
-        }
+        Naped naped = null;
+        Pojazd newObj = null;
         
-        Pojazd newObj;
-        if(rb_osobowka.isSelected())
+        try
         {
-            newObj = new Osobowy(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga), Integer.parseInt(str_ilosc_miejsc));
+            if(rb_n_mechaniczny.isSelected())
+            {
+                naped = new Mechaniczny(Float.parseFloat(str_moc), Float.parseFloat(str_zuzycie_plaiwa), Integer.parseInt(str_przebieg));
+            }
+            else
+            {
+                naped = new Fizyczny();
+            }
+
+            if(rb_osobowka.isSelected())
+            {
+                newObj = new Osobowy(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga), Integer.parseInt(str_ilosc_miejsc));
+            }
+            else if(rb_transportowy.isSelected())
+            {
+                newObj = new Transportowy(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga), Integer.parseInt(str_ilosc_miejsc), Integer.parseInt(str_max_udzwig));
+            }
+            else if(rb_motor.isSelected())
+            {
+                newObj = new Motor(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga));
+            }
+            else
+            {
+                newObj = new Rower(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga));
+            }
         }
-        else if(rb_transportowy.isSelected())
+        catch(Exception e)
         {
-            newObj = new Transportowy(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga), Integer.parseInt(str_ilosc_miejsc), Integer.parseInt(str_max_udzwig));
-        }
-        else if(rb_motor.isSelected())
-        {
-            newObj = new Motor(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga));
-        }
-        else
-        {
-            newObj = new Rower(naped, str_nr_rejestracyjny, Float.parseFloat(str_cena), Float.parseFloat(str_waga));
+            lb_message.setTextFill(Paint.valueOf("#FF0000"));
+            lb_message.setText("Bledny format podanych danych.");
+            return;
         }
         
         dodano = Main.manager_pojazdow.register(newObj);

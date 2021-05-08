@@ -1,11 +1,12 @@
 package acz.model;
 
 import acz.model.Pojazdy.Pojazd;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Wypozyczenia 
+public class Wypozyczenia implements Serializable
 {
     private List<Pojazd> wypozyczenia;
 

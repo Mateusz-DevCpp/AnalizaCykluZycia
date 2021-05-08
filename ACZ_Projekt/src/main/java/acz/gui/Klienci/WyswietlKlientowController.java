@@ -43,6 +43,17 @@ public class WyswietlKlientowController
     }
     
     @FXML
+    private void usun() throws IOException
+    {
+        Main.wybrany_klient = lista.getSelectionModel().getSelectedItem();
+        Main.manager_klientow.unregister(Main.wybrany_klient);
+        Main.wybrany_klient = null;
+        
+        lista.getItems().clear();
+        initialize();
+    }
+    
+    @FXML
     private void goToMainWindow() throws IOException
     {
         Window.setRoot("main");

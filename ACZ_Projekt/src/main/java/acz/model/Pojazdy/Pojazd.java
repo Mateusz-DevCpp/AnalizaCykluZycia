@@ -1,8 +1,9 @@
 package acz.model.Pojazdy;
 
 import acz.model.Napedy.Naped;
+import java.io.Serializable;
 
-public abstract class Pojazd 
+public abstract class Pojazd implements Serializable
 {
     private Naped naped;
     private String id;

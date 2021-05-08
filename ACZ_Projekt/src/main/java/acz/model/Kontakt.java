@@ -1,6 +1,8 @@
 package acz.model;
 
-public class Kontakt 
+import java.io.Serializable;
+
+public class Kontakt implements Serializable
 {
     private String email;
     private String nr_telefonu;

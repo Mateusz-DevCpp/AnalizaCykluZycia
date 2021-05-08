@@ -2,8 +2,9 @@ package acz.model.Manager;
 
 import acz.model.Pojazdy.Pojazd;
 import acz.model.Repozytoria.RepozytoriumPojazdow;
+import java.io.Serializable;
 
-public class ManagerPojazdow implements Manager<Pojazd>
+public class ManagerPojazdow implements Manager<Pojazd>, Serializable
 {
     private RepozytoriumPojazdow pojazdy_rep;
     

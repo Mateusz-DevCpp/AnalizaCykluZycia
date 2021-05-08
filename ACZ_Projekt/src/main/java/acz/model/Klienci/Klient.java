@@ -3,8 +3,9 @@ package acz.model.Klienci;
 import acz.model.Adres;
 import acz.model.Kontakt;
 import acz.model.Wypozyczenia;
+import java.io.Serializable;
 
-public abstract class Klient 
+public abstract class Klient implements Serializable
 {
     private Adres adres;
     private Kontakt kontakt;

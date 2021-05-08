@@ -1,6 +1,8 @@
 package acz.model;
 
-public class Adres 
+import java.io.Serializable;
+
+public class Adres implements Serializable
 {
     private String miasto;
     private String ulica;

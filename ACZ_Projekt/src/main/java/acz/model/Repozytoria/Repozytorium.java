@@ -1,10 +1,11 @@
 
 package acz.model.Repozytoria;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Repozytorium<T>
+public class Repozytorium<T> implements Serializable
 {
     List<T> objects;
 

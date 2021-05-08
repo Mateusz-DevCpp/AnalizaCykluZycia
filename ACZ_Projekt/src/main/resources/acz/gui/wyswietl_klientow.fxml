@@ -45,5 +45,6 @@
       <ListView fx:id="lista" layoutX="193.0" layoutY="32.0" prefHeight="447.0" prefWidth="446.0" stylesheets="@stylesheet/bg_list_color.css" />
       <Button fx:id="bt_modyfikuj" layoutX="20.0" layoutY="50.0" mnemonicParsing="false" onAction="#modyfikuj" prefHeight="30.0" prefWidth="150.0" text="Modyfikuj" />
       <Button fx:id="bt_szczegoly" layoutX="20.0" layoutY="100.0" mnemonicParsing="false" onAction="#szczegoly" prefHeight="30.0" prefWidth="150.0" text="Szczegoly" />
+      <Button fx:id="bt_usun" layoutX="20.0" layoutY="400.0" mnemonicParsing="false" onAction="#usun" prefHeight="30.0" prefWidth="150.0" text="Usun" />
    </children>
 </Pane>

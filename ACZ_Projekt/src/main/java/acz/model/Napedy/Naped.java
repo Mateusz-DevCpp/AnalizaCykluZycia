@@ -1,6 +1,8 @@
 package acz.model.Napedy;
 
-public abstract class Naped 
+import java.io.Serializable;
+
+public abstract class Naped implements Serializable
 {
     public Naped()
     {

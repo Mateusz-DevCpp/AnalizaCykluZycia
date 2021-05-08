@@ -2,8 +2,9 @@ package acz.model.Manager;
 
 import acz.model.Klienci.Klient;
 import acz.model.Repozytoria.RepozytoriumKlientow;
+import java.io.Serializable;
 
-public class ManagerKlientow implements Manager<Klient>
+public class ManagerKlientow implements Manager<Klient>, Serializable
 {
     private RepozytoriumKlientow klient_rep;
     

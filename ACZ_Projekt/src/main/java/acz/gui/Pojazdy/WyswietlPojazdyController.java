@@ -25,8 +25,8 @@ public class WyswietlPojazdyController
         {
             bt_modyfikuj.setDisable(true);
             bt_szczegoly.setDisable(true);
+            bt_usun.setDisable(true);
         }
-        
     }
     
     @FXML
@@ -41,6 +41,17 @@ public class WyswietlPojazdyController
     {
         Main.wybrany_pojazd = lista.getSelectionModel().getSelectedItem();
         Window.setRoot("szczegoly_pojazdu");
+    }
+    
+    @FXML
+    private void usun() throws IOException
+    {
+        Main.wybrany_pojazd = lista.getSelectionModel().getSelectedItem();
+        Main.manager_pojazdow.unregister(Main.wybrany_pojazd);
+        Main.wybrany_pojazd = null;
+        
+        lista.getItems().clear();
+        initialize();
     }
     
     @FXML
@@ -90,5 +101,6 @@ public class WyswietlPojazdyController
     @FXML private ListView<Pojazd> lista;
     @FXML private Button bt_modyfikuj;
     @FXML private Button bt_szczegoly;
+    @FXML private Button bt_usun;
     
 }
